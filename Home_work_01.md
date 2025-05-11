@@ -48,6 +48,8 @@ commit;
 ```
 
 6. Изучение уровней изоляции
+
+```sql
 otus_postgresql_advanced_2025=# show transaction isolation level;
  transaction_isolation
 -----------------------
