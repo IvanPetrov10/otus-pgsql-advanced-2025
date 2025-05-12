@@ -23,7 +23,7 @@
 
 ```
 
-3. Создайте каталог /var/lib/postgres для хранения данных.
+3. Создал каталог /var/lib/postgres для хранения данных.
 
 ```bash
 [root@vml-yc-docker-01:~]# mkdir -p /var/lib/postgres
@@ -59,7 +59,7 @@ postgres=# \l
 
 ```
 
-5. Разверните контейнер с клиентом PostgreSQL
+5. Развернул контейнер с клиентом PostgreSQL
 
 ```bash
 [root@vml-yc-docker-01:~]# mkdir psql-client
@@ -100,7 +100,7 @@ postgres      14        fd70450ab5f7   4 days ago      426MB
 hello-world   latest    74cc54e27dc4   3 months ago    10.1kB
 ```
 
-6. Подключитесь из контейнера с клиентом к контейнеру с сервером и создайте таблицу с данными о перевозках.
+6. Подключился из контейнера с клиентом к контейнеру с сервером и создал таблицу с данными о перевозках
 
 ```bash
 [root@vml-yc-docker-01:~/psql-client]# docker run -it --rm psql-client -U postgres -h 10.129.0.10 -d postgres -W
@@ -130,7 +130,7 @@ insert into shipments(product_name, quantity, destination) values('sugar', 600, 
 insert into shipments(product_name, quantity, destination) values('sugar', 400, 'USA');
 ```
 
-7. Подключился к контейнеру с сервером с компьютера.
+7. Подключился к контейнеру с сервером с домашнего компьютера
 
 ```bash
 [root@vml-terminal:~]# pgcli -p 5432 -U postgres -h 89.169.175.197 -d postgres -W
@@ -164,7 +164,7 @@ f92d49b3ef16   hello-world   "/hello"   About an hour ago   Exited (0) About an 
 [root@vml-yc-docker-01:~]# docker run -d -e POSTGRES_PASSWORD=postgres --name postgres14 -p 5432:5432 -v /var/lib/postgres:/var/lib/postgresql/data postgres:14
 ```
 
-9. Проверил, что данные остались на месте.
+9. Проверил, что данные остались на месте
 
 ```sql
 otus_home_work_2=# select * from shipments;
