@@ -123,7 +123,6 @@ otus_postgresql_advanced_2025=# select * from shipments;
   1 | bananas      |     1000 | Europe
   2 | coffee       |      500 | USA
   3 | sugar        |      300 | Asia
-  5 | bananas      |     2000 | Africa
 ```
 
 Во второй сессии запись по-прежнему не видна, поскольку при данном уровне изоляции снимок выполняется на момент начала ТРАНЗАКЦИИ, 
