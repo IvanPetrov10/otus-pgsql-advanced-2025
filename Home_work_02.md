@@ -23,7 +23,7 @@
 
 ```
 
-3. Создал каталог /var/lib/postgres для хранения данных.
+3. Создал каталог /var/lib/postgres для хранения данных
 
 ```bash
 [root@vml-yc-docker-01:~]# mkdir -p /var/lib/postgres
